@@ -1,0 +1,73 @@
+
+
+## Primary actors 
+### Member: A library member who can search, reserve, borrow, renew, or return books, pay fines, and request membership cancellation.
+#### Activities by membership are as below
+
+1) Login/Logout: To securely access or exit their member account and access library services.
+2) Register/Update account: To create a new membership account or update personal and contact information.
+3) Cancel membership: To voluntarily request termination of their library membership.
+4) View account: To review their own account details, borrowing history, current checkouts, reservations, and fines.
+5) Search catalog: Search the library catalog for books or resources by title, author, subject, or publication date.
+6) Reserve book: To place a hold on a currently checked-out book, ensuring it can be borrowed when it becomes available.
+7) Checkout book: To complete the process of borrowing a book, either directly or by following a successful reservation.
+8) Renew book: To request an extension for the borrowing period of a currently issued book.
+10) Return book: To return a borrowed book to the library, update the system, and potentially make it available for other members.
+11) Remove reservation: To cancel a previously placed hold on a book.
+12) Pay fine: To settle any outstanding fines incurred due to overdue book returns or other violations, allowing the member to maintain good standing. 
+
+### Librarian: The administrator responsible for managing books and book items, issuing and returning books, handling reservations, managing member accounts, and overseeing fines.
+#### Activities by Librarian are as below
+1) Login/Logout: To securely access or exit the librarian account and manage system resources.
+2) Register/Update account: To register a new library member by collecting and saving their details in the system, or modify a member’s personal details or membership status.
+3) Cancel membership: To terminate the library membership of a member and deactivate their account.
+4) View account: To access and review a library member’s account details and history.
+5) Issue library card: To create and assign a unique one to a new member during registration, enabling them to borrow books and access other library services.
+6) Add book: To add a new book entry to the library’s catalog, including essential metadata such as author, ISBN, etc.
+7) Edit book: To update the information of an existing book in the library catalog.
+8) Remove book: To delete a book record from the library catalog, typically if it is no longer part of the library’s collection.
+10) Add book item: To add a physical copy of a book to the library’s inventory (e.g., when purchasing additional copies).
+11) Edit book item: To update a specific physical book copy’s details (such as rack location).
+12) Remove book item: To delete a specific book copy from the inventory.
+13) Issue book: To lend a book item to a library member, recording the issuance in the system.
+14) Renew book: To extend the borrowing period for a book already issued to a member, per library policy.
+15) Update catalog: To comprehensively manage the library catalog by adding, editing, or removing books or book items.
+16) Remove reservation: To cancel a member’s book reservation, make the book available to others.
+
+## Secondary actors
+### Library management system: It can send alerts related to reservations and late returns of books.
+#### Activities by LMS 
+1) Calculate fine: To automatically determine the fine amount for overdue books based on the return date and the library’s fine policy.
+2) Send overdue notification: To send alerts to members when the return due date for a borrowed book has passed, prompting action.
+3) Send reservation available notification: To inform members when a previously reserved book becomes available for borrowing or checkout.
+4) Send reservation canceled notification: To notify members when their reservation for a book has been canceled.
+
+## For the LMS (library management system), the requirements have been defined below:
+=========================================================================================
+R1: The system should store information about books and members, and maintain a complete log of all book borrowing, return, reservation, and renewal transactions.
+
+R2: Every book must have a unique identification number and detailed information, including rack/location in the library.
+
+R3: Each book should include the ISBN, title, author name, subject, and publication date.
+
+R4: A book can have multiple copies; each physical copy is a distinct book item with a unique ID.
+
+R5: The system must support two types of users: librarian and member, each with a library card and a unique card number.
+
+R6: Every user must have a library card with a unique card number.
+
+R7: Members can borrow a maximum of 10 books at a time.
+
+R8: A member can borrow a book for 15 days.
+
+R9: Only one member can reserve each book item at a time.
+
+R10: The system must record who issued, reserved, or renewed a book item and on which date.
+
+R11: According to policy limits, the system must allow members to renew borrowed books.
+
+R12: The system should notify members if a book is not returned by the due date or when a reserved book becomes available.
+
+R13: If a book is unavailable, a member should be able to reserve it for when it becomes available.
+
+R14: The system should allow users to search for books by title, author, subject, or publication date.
